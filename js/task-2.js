@@ -25,13 +25,11 @@ const images = [
   }
 ];
 
-// Знаходимо ul.gallery
 const galleryList = document.querySelector('.gallery');
 
-// Створюємо галерею зображень за допомогою шаблонних рядків
 const galleryMarkup = images
   .map(({ url, alt }) => `<li class="gallery-item"><img src="${url}" alt="${alt}" class="gallery-image"></li>`)
   .join('');
 
-// Додаємо всю розмітку в DOM за одну операцію
+
 galleryList.insertAdjacentHTML('beforeend', galleryMarkup);
